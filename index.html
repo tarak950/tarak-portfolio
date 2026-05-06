@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tharak | Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2 class="logo">TARAK KUMAR</h2>
+    <div class="menu">
+        <a href="#" onclick="showSection('about')">about</a>
+        <a href="#" onclick="showSection('projects')">projects</a>
+        <a href="#" onclick="showSection('contact')">contact</a>
+    </div>
+</div>
+
+
+<!-- Hero Section -->
+<div class="hero">
+  
+    <!-- LEFT SIDE -->
+    <div class="text">
+        <h3>Hi I'm Tharak</h3>
+        <h1>DATA ANALYST</h1>
+        <p>Aspiring Data Analyst with a strong foundation in Execl, SQL, and python.
+          I specialize in data analysis, visualization, and problem-solving to deliver 
+          data-drive Insights that impove decision-making
+        </p>
+        <a href="Tarak resume.pdf" class="btn">Download Resume</a>
+           <div class="contact">
+            
+            </div>
+
+            <div class="social">
+                <a href="https://wa.me/+919502198069" target="_blank">
+                 <img src="whatsapp.gif">
+                </a>
+
+                    <a href="https://instagram.com/mr_matthew__1" target="_blank">
+                         <img src="instagram.png">
+                    </a>
+
+                        <a href="https://linkedin.com/in/Tarak Kumar Gaddam " target="_blank">
+                             <img src="linkdin.png">
+                        </a>
+
+                        <a href="https://github.com/tarak950" target="_blank">
+                            <img src="github.png">
+                        </a>
+            </div>
+    </div>
+            
+
+    <!-- RIGHT SIDE -->
+    <div class="image">
+        <img src="photo.png" alt="Tharak" class="profile-img">
+
+    </div>
+
+</div>
+<!-- About section-->
+<div id="about" class="section hidden">
+  <h2>about me</h2>
+  <p>I am a Data Analyst skilled in Excel, SQL, & python.</p>
+</div>
+ <!--Project section-->
+   <div id="projects" class="section hidden" >
+     <h2>projects</h2>
+     <p>I am a Data Analyst skilled in Excel, SQL, & python.</p>
+   </div>
+ <!--Contacts section-->
+    <div id="contact" class="section hidden">
+        <h2> Contact</h2>
+      <p>+91-9502198069</p>
+      <p>Email: gaddamta1122@gmail.com</p>
+    </div>
+   
+<script>
+
+let currentSection = "";
+
+function showSection(id){
+
+    // same section malli click chesthe close chey
+    if(currentSection === id){
+        document.getElementById(id).style.display = "none";
+        currentSection = "";
+        return;
+    }
+
+    // anni sections hide chey
+    document.getElementById("about").style.display = "none";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+
+    // selected section show chey
+    document.getElementById(id).style.display = "block";
+
+    currentSection = id;
+}
+
+</script>
+
+
+</body>
+</html>
