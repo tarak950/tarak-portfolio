@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarak | Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2 class="logo">TARAK KUMAR</h2>
+    <div class="menu">
+        <a href="#" onclick="showSection('about')">about</a>
+        <a href="#" onclick="showSection('projects')">projects</a>
+        <a href="#" onclick="showSection('contact')">contact</a>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+    <div class="text">
+        <h3>Hi I'm Tarak</h3>
+        <h1>DATA ANALYST</h1>
+        <p>Aspiring Data Analyst with strong skills in Excel, SQL, and Python.
+           I specialize in data analysis, visualization, and problem-solving.</p>
+        <a href="Tarak resume.pdf" class="btn">Download Resume</a>
+        <div class="social">
+            <a href="https://wa.me/+919502198069" target="_blank"><img src="whatsapp.gif"></a>
+            <a href="https://instagram.com/mr_matthew__1" target="_blank"><img src="instagram.png"></a>
+            <a href="https://linkedin.com/in/Tarak-Kumar-Gaddam" target="_blank"><img src="linkdin.png"></a>
+            <a href="https://github.com/tarak950" target="_blank"><img src="github.png"></a>
+        </div>
+    </div>
+    <div class="image">
+        <img src="photo.png" alt="Tarak" class="profile-img">
+    </div>
+</div>
+
+<!-- About Section -->
+<div id="about" class="section" style="display:none">
+    <div class="circle-wrapper">
+        <div class="about-circle">
+            <h2>TARAK KUMAR</h2>
+            <p class="role">Data Analyst</p>
+            <div class="divider"></div>
+            <p class="About-desc">Skilled in data analysis,<br>visualization & problem-solving<br>to deliver data-driven insights.</p>
+            <div class="skills">
+                <span class="skill-tag">Excel</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Python</span>
+            </div>
+            <div class="circle-links">
+                <a href="https://github.com/tarak950" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/Tarak-Kumar-Gaddam" target="_blank">LinkedIn</a>
+                <a href="mailto:gaddamta1122@gmail.com">Email</a>
+            </div>
+        </div>
+        <div class="reflection"></div>
+    </div>
+</div>
+
+<!-- Projects Section -->
+<div id="projects" class="section" style="display:none">
+    <h2>projects</h2>
+    <div class="Project-card">
+        <h3>EMPLOYEE ATTRITION ANALYSIS USING PYTHON</h3>
+        <p>Analyzed data using Excel, SQL, and Python to identify patterns and improve decision-making.</p>
+        <a href="https://github.com/tarak950/My-Projects.git" target="_blank" class="project-btn">View on GitHub</a>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="section" style="display:none">
+    <h2>contact</h2>
+    <p>📞 +91-9502198069</p>
+    <p>📧 gaddamta1122@gmail.com</p>
+</div>
+
+<script>
+let currentSection = "";
+
+function showSection(id) {
+    if (currentSection === id) {
+        document.getElementById(id).style.display = "none";
+        currentSection = "";
+        return;
+    }
+    ["about", "projects", "contact"].forEach(function(sec) {
+        document.getElementById(sec).style.display = "none";
+    });
+    document.getElementById(id).style.display = "flex";
+    currentSection = id;
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
